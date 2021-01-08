@@ -1,0 +1,24 @@
+{
+  "name": "pro1",
+  "version": "1.0.0",
+  "description": "sample test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "eslint": "eslint ./",
+    "eslint-fix": "eslint ./ --fix",
+    "test": "./node_modules/.bin/jasmine-node spec --junitreport",
+    "build": "webpack",
+    "prod": "node dist/api.bundle.js"
+  },
+  "author": "Ethan Hunt",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "jasmine-xml-reporter": "^1.2.1"
+  }
+}
