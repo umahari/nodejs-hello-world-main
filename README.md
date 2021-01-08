@@ -5,7 +5,7 @@ Step 1). Run below command in rood directory where package.json exist
 
 	npm install
 
-Step 2). Run below command to run test case and to generate XML report
+Step 2). Run below command to run test case and to generate XML report. xml files can get /reports directory
 
 	npm run test	
 
