@@ -20,7 +20,7 @@ jobs:
     - uses: act10ns/slack@v1
       with:
           status: starting
-          channel: '#testing-for-punnet'
+          channel: 'github-actions'
           if: always()
     
     - uses: actions/checkout@v2
