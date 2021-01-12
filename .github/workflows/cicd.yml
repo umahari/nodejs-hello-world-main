@@ -30,7 +30,9 @@ jobs:
     - run: npm install jasmine-node -g
     - name: npm test
       id: npm_test
-      run: npm test 
+      run: npm test
+      env:  
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Upload Unit Test Results
       if: always()
       uses: actions/upload-artifact@v2
