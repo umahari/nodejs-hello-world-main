@@ -72,6 +72,6 @@ jobs:
         with:
           check_name: Unit Test Results
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          path: $GITHUB_WORKSPACE/reports/*.xml
+          files: $GITHUB_WORKSPACE/reports/*.xml
           
 
