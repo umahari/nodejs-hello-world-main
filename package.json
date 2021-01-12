@@ -7,7 +7,7 @@
     "start": "node index.js",
     "eslint": "eslint ./",
     "eslint-fix": "eslint ./ --fix",
-    "test": "./node_modules/.bin/jasmine-node spec --junitreport --forceexit",
+    "test": "./node_modules/.bin/jasmine-node spec --junitreport --output=reports/ --forceexit",
     "build": "webpack",
     "prod": "node dist/api.bundle.js"
   },
