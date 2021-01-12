@@ -71,6 +71,7 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v1.6
         with:
           check_name: Unit Test Results
+          path: $GITHUB_WORKSPACE/reports/*.xml  
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          path: $GITHUB_WORKSPACE/reports/*.xml
+          
 
