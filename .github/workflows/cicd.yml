@@ -36,6 +36,11 @@ jobs:
         npm test
       env:  
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: check reports
+      run: |
+       ls -lrt $GITHUB_WORKSPACE/reports
+       echo "######################Time#################"
+       date
     - name: Upload Unit Test Results
       if: always()
       uses: actions/upload-artifact@v2
