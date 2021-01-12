@@ -31,8 +31,8 @@ jobs:
     - name: npm test
       id: npm_test
       run: | 
-        chmod +x $GITHUB_WORKSPACE
-        echo $GITHUB_WORKSPACE
+        chmod +x $GITHUB_WORKSPACE/reports
+        echo $######time########
         npm test
       env:  
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,7 +41,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Unit Test Results 
-        path: results.xml 
+        report_paths: $GITHUB_WORKSPACE/reports/**/*.xml 
     - uses: act10ns/slack@v1
       with:
         status: ${{ job.status }}
@@ -72,5 +72,5 @@ jobs:
         with:
           check_name: Unit Test Results
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          files: results.xml 
+          report_paths: $GITHUB_WORKSPACE/reports/**/*.xml
 
