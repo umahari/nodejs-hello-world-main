@@ -72,11 +72,18 @@ jobs:
 
  
 
+  #    - name: Publish Unit Test Results
+     #   uses: EnricoMi/publish-unit-test-result-action@v1.6
+     #   with:
+     #     check_name: Unit Test Results
+     #     github_token: ${{ secrets.GITHUB_TOKEN }}
+     #     files: reports/*.xml
+       
       - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1.6
+        uses: mikepenz/action-junit-report@v1
+#         if: always()
         with:
-          check_name: Unit Test Results
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          files: reports/*.xml
+          report_paths: reports/**/*.xml   
           
 
