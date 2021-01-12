@@ -41,7 +41,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Unit Test Results 
-        report_paths: $GITHUB_WORKSPACE/reports/**/*.xml 
+        path: $GITHUB_WORKSPACE/reports/**/*.xml 
     - uses: act10ns/slack@v1
       with:
         status: ${{ job.status }}
@@ -72,5 +72,5 @@ jobs:
         with:
           check_name: Unit Test Results
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          report_paths: $GITHUB_WORKSPACE/reports/**/*.xml
+          path: $GITHUB_WORKSPACE/reports/**/*.xml
 
