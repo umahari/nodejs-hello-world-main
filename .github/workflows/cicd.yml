@@ -27,10 +27,13 @@ jobs:
     - name: npm build
       id: npm_build
       run: npm run build --if-present
-    - run: npm install jasmine-node -g
+    - run: npm install jasmine-node 
     - name: npm test
       id: npm_test
-      run: npm test
+      run: | 
+        chmod +x $GITHUB_WORKSPACE
+        echo $GITHUB_WORKSPACE
+        npm test
       env:  
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Upload Unit Test Results
