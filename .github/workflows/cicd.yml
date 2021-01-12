@@ -78,7 +78,12 @@ jobs:
      #     check_name: Unit Test Results
      #     github_token: ${{ secrets.GITHUB_TOKEN }}
      #     files: reports/*.xml
-       
+     
+      - name: reports
+        run: |
+          ls -lrt $GITHUB_WORKSPACE/reports
+          echo "######################Time#################"
+           date
       - name: Publish Unit Test Results
         uses: mikepenz/action-junit-report@v1
 #         if: always()
