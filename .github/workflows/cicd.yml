@@ -82,7 +82,7 @@ jobs:
       - name: reports
         run: |
           pwd
-          ls -lrt $GITHUB_WORKSPACE/reports
+          ls -la $GITHUB_WORKSPACE
           echo "######################Time#################"
            date
       - name: Publish Unit Test Results
