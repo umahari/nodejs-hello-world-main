@@ -14,7 +14,7 @@
   "author": "Ethan Hunt",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.17.0",
+    "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1"
   },
