@@ -19,6 +19,6 @@
     "eslint-plugin-import": "^2.22.1"
   },
   "dependencies": {
-    "jasmine-xml-reporter": "^1.2.1"
+    "jasmine-xml-reporter": "^1.2.2"
   }
 }
